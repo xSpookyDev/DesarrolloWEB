@@ -1,0 +1,92 @@
+:root{
+    --default-bg-color:lightblue;
+}
+
+.color-by-name{
+    background-color: coral;
+    color: rebeccapurple;
+    border: medium solid yellowgreen;
+}
+
+.opacity{
+    background-color: orchid;
+    color: navy;
+    border: thick solid black;
+    opacity: .75;
+}
+
+/* 
+Unidades de medida 
+
+1)absolutas(su valor no cambia son unidades del mundo real) pc,cm,mm,in,q
+pt(1/72in)
+px(1/96in)
+2) Relativas(Su valor es relativo a un contexto)
+em,rem,ex,ch - al tamaño de la fuente
+em- basada en la anchura de la "m" de la fuente del elemento
+rem- basada en la anchura de la "m" de la fuente del elemento raiz (html)
+ex - basadad en la altura de la "x" de la fuente del elemento 
+ch- basada en la anchura del "0" de la fuente del elemento
+%- al tamaño del contenerdor 
+vw, vh, vmin, vmax ' al tamaño del viewport 
+vw-ancho del viewport van del 1 a 100
+vh- alto del viewport van de 1 a 100
+vmax - entre vw y vh toma el que tenga mayor valor 
+vmax - entre vw y vh toma el que tenga menor valor
+conversion entre unidades - http://pxtoem.com/    */
+html{
+    
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+.pixels{
+    background-color: cadetblue;
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    font-size: 16px;
+    border: thick solid red;
+}
+.ems{
+    background-color: cadetblue;
+    font-size: 24px;
+    padding: 1em .5em;
+    border: thick solid red;
+}
+
+.custom-props-1{
+    --primary-color:gray;
+    --font-size: 32px;
+    background-color: var(--primary-color);
+
+}
+.custom-props-3{
+    font-size: var(--font-size);
+}
+.title-props{
+    --primary-color: navy;
+    color: var(--primary-color, orange);
+}
+.ch-10{
+    --padding-size:3ch;
+    --num-ch: 10ch;
+    background-color: var(--default-bg-color);
+    
+    font-size: 2rem;
+    padding: var(--padding-size);
+    width: calc(var(--num-ch) + var(--padding-size)*2);
+      
+}
+.min-max{
+    background-color: var(--default-bg-color);
+    margin-top: 1rem;
+    width: min(300px,20vw,20rem);
+    height: max(200px, 25vh);
+}
+h1{
+    font-size: clamp(2rem, 1rem + 3vw, 3rem);
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimiento en Css</title>
+    <link rel="stylesheet" href="css/motion.css">
+</head>
+<body>
+    <h1>Movimiento en CSS</h1>
+    <hr>
+    <section class="transitions">
+        <h2>Transiciones</h2>
+        <div class="box"></div>
+        <article class="card">
+            <img src="asset/puesta-sol.jpg" alt="">
+        </article>
+    </section>
+    <hr>
+    <section class="transforms">
+        <h2>Transformaciones</h2>
+        <h3>Transformaciones en 2D</h3>
+        <article class="card transform-2d">
+            <img src="asset/puesta-sol.jpg" alt="">
+        </article>
+        <h3>Transformaciones en 3D</h3>
+        <article class="card transform-3d">
+            <img src="asset/puesta-sol.jpg" alt="">
+        </article>
+        <h3>Origen de transformacion</h3>
+        <article class="card transform-origin">
+            <img src="asset/puesta-sol.jpg" alt="">
+        </article>
+        
+        <h3>Flip card</h3>
+        <article class="flip-card-1">
+            <div class="flip-face flip-front">
+                <img src="asset/puesta-sol.jpg" alt="">
+            </div>
+            <div class="flip-face flip-back">
+                <img src="asset/aves.png" alt="">
+            </div>
+        </article>
+        <article class="flip-card-2">
+            <div class="flip-face flip-front">
+                <img src="asset/puesta-sol.jpg" alt="">
+            </div>
+            <div class="flip-face flip-back">
+                <img src="asset/aves.png" alt="">
+            </div>
+        </article>
+    </section>
+    <hr>
+    <section class="animations">
+        <h2>Animaciones</h2>
+        <article class="card my-animation">
+            <img src="asset/puesta-sol.jpg" alt="">
+        </article>
+        
+    </section>
+    <hr>
+    <section class="motion-examples">
+        <h2>Ejemplos de efectos de movimiento en CSS</h2>
+        <h3>FadeIn / FadeOut</h3>
+        <div class="fade-in">👨</div>
+        <div class="fade-out">👨</div>
+        <h3>Sacudir</h3>
+        <div class="shake">
+            😎
+        </div>
+        <h3>Pulsaciones</h3>
+        <div class="pulse">💗</div>
+        <div class="pulse">SPOOKY </div>
+        <h3>Dibujando y animando con CSS</h3>
+        <h4>Corazon</h4>
+        <div class="pulse">Eres el CSS de mi HTML </div>
+        <div class="heart"></div>
+        <h4>Spinner/ loader</h4>
+        <div class="spinner"></div>
+        <h3>botones animados</h3>
+        <button class="btn anim-bottom to-left">Animacion izquierda</button>
+        <button class="btn anim-bottom to-center">Animacion Centro</button>
+        <button class="btn anim-bottom to-right">Animacion Derecha</button>
+        <button class="btn anim-bg-gradient ">Fondo con gradiente</button>
+        <h3>Menu de pestañas (tabs)</h3>
+        <div class="tabs-menu">
+            <input type="radio" id="tab-1" name="tabs">
+            <label for="tab-1">seccion 1</label>
+            <input type="radio" id="tab-2" name="tabs">
+            <label for="tab-2">seccion 2</label>
+            <input type="radio" id="tab-3" name="tabs">
+            <label for="tab-3">seccion 3</label>
+            <input type="radio" id="tab-4" name="tabs">
+            <label for="tab-4">seccion 4</label>
+            <div class="tab-bg-hover"></div>
+        </div>
+        <hr>
+        <h3>Menu off canvas</h3>
+    <input type="checkbox" class="off-canvas-btn">
+    <label class="off-canvas-burger"></label>
+    <nav class="off-canvas-menu">
+        <div class="off-canvas-menu-container">
+            <a href="" class="off-canvas-link">Seccion 1</a>
+            <a href="" class="off-canvas-link">Seccion 2</a>
+            <a href="" class="off-canvas-link">Seccion 3</a>
+            <a href="" class="off-canvas-link">Seccion 4</a>
+            <a href="" class="off-canvas-link">Seccion 5</a>
+        </div>
+    </nav>
+    <h3>Ventana modal</h3>
+    <a href="#modal-1">abrir modal</a>
+    <article id="modal-1" class="modal">
+        <div class="modal-container">
+            <a href="#cerrar" class="modal-close">X</a>
+            <h2>Esto es una ventana modal</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, hic assumenda cupiditate labore itaque, dicta necessitatibus eveniet aliquid nisi, impedit excepturi quibusdam ratione temporibus nostrum modi. Voluptates ullam esse odit.</p>
+            <ul>
+                <li><a href="">enlace</a></li>
+                <li><a href="">enlace</a></li>
+                <li><a href="">enlace</a></li>
+                <li><a href="">enlace</a></li>
+                <li><a href="">enlace</a></li>
+                <li><a href="">enlace</a></li>
+            </ul>
+        </div>
+    </article>
+    <h3>Stars Wars intro</h3>
+    <article class="star-wars">
+        <div class="star-wars-container">
+            <h2>Episode V</h2>
+            <p>It is a dark time for the
+                Rebellion. Although the Death
+                Star has been destroyed,
+                Imperial troops have driven the
+                Rebel forces from their hidden
+                base and pursued them across
+                the galaxy.</p>
+                
+                <p> Evading the dreaded Imperial
+                Starfleet, a group of freedom
+                fighters led by Luke Skywalker
+                has established a new secret
+                base on the remote ice world
+                of Hoth.</p>
+                
+                <p>The evil lord Darth Vader,
+                obsessed with finding young
+                Skywalker, has dispatched
+                thousands of remote probes into
+                the far reaches of space....
+                </p>
+        </div>
+    </article>
+    </section>
+    
+    <a href="index.html#temario-css">temario☝️</a>
+</body>
+</html>

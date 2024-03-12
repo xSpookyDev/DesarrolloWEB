@@ -1,0 +1,16 @@
+selectores basicos 
+1) etiquetas- son elementos html
+2)identificadores - atributo id - #
+3)clases - atributo class - "."
+
+dar estilos con clases nos permite reutilizar nuestros codigos css
+
+
+html {          este permite que el paso de pagina sea mas atractivo al desplazarse
+    scroll-behavior:smooth;
+}
+
+los selectores de hermanos van a aplicar a los elementos qye son hermanos y los que esten por debajo de los elementos de referencia
+
+selectores de atributos
+

@@ -1,0 +1,211 @@
+h1{
+    color: orangered;
+    background-color: black;
+}
+p{
+    color: midnightblue
+}
+/* dar estilos con id es un AntiPatron */
+#parrafo-dos{
+    background-color: aquamarine;
+}
+.text-20{
+    font-size: 20px;
+}
+.text-32{
+    font-size:32px ;
+}
+.bg-skyblue{
+    background-color: skyblue;
+}
+.bg-steelblue{
+    background-color: steelblue;
+}
+.text-white{
+    color: white;
+}
+.hijos-directos> li{
+    background-color: thistle;
+}
+.hijos-descendientes b {
+    background-color: thistle;
+}
+.hermanos-general~li{
+    background-color: rgb(245, 0, 245);
+}
+.hermanos-adyacentes+li{
+    background-color: thistle;
+}
+
+/* selectores atributos */
+.selectores-atributos a[href]{
+    color: rgb(52, 151, 12);
+}
+.selectores-atributos a[target=_blank]{
+    font-weight: bold;
+}
+*{
+    font-family: sans-serif;
+}
+.selector-universal *{
+    font-size: 24px;
+}
+
+/* PSEUDOCLASES */
+
+.form-pseudoclases *:required{
+border-color: yellowgreen;
+}
+.form-pseudoclases *:valid{
+    border-color: greenyellow;
+}
+.form-pseudoclases *:invalid{
+    border-color: red;
+}
+.form-pseudoclases *:focus{            /* sirve para que cuando tenga el foco del mouse se cambie el fondo de color */
+    background-color: skyblue;
+}
+.form-pseudoclases *:disabled{            /* sirve para que cuando tenga el foco del mouse se cambie el fondo de color */
+    background-color: rgb(182, 2, 32);
+}
+.menu-pseudoclases a:visited{
+    color: olive;
+}
+.menu-pseudoclases a:hover{
+    color: orange;
+}
+.p-pseudoclases:hover{  /* permite agrandar la letra al pasar por arriba de el  */
+    font-size: 20px;
+}
+#temario-css:target{
+    background-color: lightgreen; /* sirve para hacer un cambio de color al darle target a un link */
+}
+.lista-pseudoclases li:first-child{
+    color: green;
+}
+.lista-pseudoclases li:last-child{
+    color: violet;
+}
+.lista-pseudoclases li:nth-child(3){
+    color:navy;
+}
+.lista-pseudoclases li:nth-child(4n){
+   font-size: 20px;
+}
+.lista-pseudoclases li:nth-child(3n){
+    font-weight: bold;
+ }
+ .lista-pseudoclases li:nth-child(even){
+    background-color: aquamarine;
+ }
+ .lista-pseudoclases li:nth-child(odd){
+    background-color: darkred;
+ }
+ .articulo-pseudoclases p:last-of-type{
+    background-color: purple;
+ }
+ .articulo-pseudoclases p:first-of-type{
+    background-color: rgb(151, 85, 151);
+ }
+ .articulo-pseudoclases *{
+    background-color: beige;
+ }
+
+ /* pseudoelementos- Dan estilos a partes especificas de un elementos, se usa el ::
+ para diferenciarlos del resto */
+
+ .saga-geminis::after{
+    content:"🏋️‍♂️"🏋️;
+ }
+ .saga-geminis::after{
+    content:"♊";
+ }
+ .saga-precio::before{
+    content:"$" ;
+    font-weight: bold;
+ }
+ .saga-geminis::after{
+    content:"USD";
+    font-weight: bold;
+ }
+ .p-pseudoelementos::first-letter{
+    font-weight: bold;
+    font-size: 32px;
+ }
+ .p-pseudoelementos::first-line{
+    color: coral;
+ }                                      
+ .p-pseudoelementos::selection{
+    color: greenyellow;             /* ESTA PSEUDOCLASE SIRVE PARA QUE AL SELECCIONAR LO ESCRITO PARA COPIAR, SE PONGA DE OTRO COLOR */
+    background-color: black;
+ }
+ .input-pseudoelementos::placeholder{
+    color: green;
+ }
+
+ /* Agrupar selectores */
+ .form-agrupar-selectores input[type="text"],
+ .form-agrupar-selectores input[type="email"],
+ .form-agrupar-selectores textarea{
+    border-color: yellow;
+    border-width: 2px;
+    border-style:dashed;
+    background-color: black;
+    font-size: 20px;
+    display: block;
+    width: 300px;
+ }
+ /* 
+ El algoritmo de CSS: es la forma en que el navegador aplica los estilos al documento HTML es bital entender este concepto para que entiendas como se aplican y en algunas ocaciones
+ se sobreescriben las reglas CSS.
+ 1 LA CASCADA
+ 2 LA ESPECIFIDAD
+ 3 LA HERENCIA 
+ 
+ La cascada es el mecanismo en que el navegador aplica los estilos. Y toma en cuenta lo siguiente en este orden: 
+ 1) El origen del Codigo: 
+    -El user Agent (los estilos por defecto del navegador)
+    -Personalizaciones del usuario.
+    -Los estilos del autor.
+ 2) La Especifidad del Selector
+ 3) Orden de Aparicion   
+ 
+ 
+ La especifidad es el peso que tiene un selector cuando hay conflicto de estilos se calcuula de lo siguiente forma: 
+ Etiquetas y psudoelementos ---------0,0,0,1
+ Clases, atributos y psudoclases-----0,0,1,0
+ Identificadores --------------------0,1,0,0
+ Estilos en linea--------------------1,0,0,0
+  important ---------------------Rompe la especifidad*/ 
+
+blockquote#cita-marco.cita-marco{
+    background-color: rgb(42, 129, 107);
+}
+
+  blockquote{
+    background-color: firebrick;
+  }
+
+#cita-marco{
+    background-color: lightgreen;
+}
+
+  blockquote.cita-marco{
+    background-color: tomato;
+
+  }
+  .cita-marco{
+    background-color: cornflowerblue;
+  }
+
+blockquote#cita-marco{
+    background-color: lightsalmon;
+}
+/*  La herencia, es la capacidad de un selector de obtener ( heredar) los valores de sus 
+ancestros mas cercanos, para aplicarla se usa el valor inherit, si queremos evitarla 
+podemos asignar otro valor o inicializar la propiedad en cuestion con el valor initial */
+
+.cita-marco cite{
+    background-color: rgb(255, 234, 0);
+    background-color: rgb(64, 131, 43);
+}
